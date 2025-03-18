@@ -1,0 +1,23 @@
+/* Ensure full height layout */
+html, body, #root, .app {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content spacing */
+.main-content {
+  flex: 1;
+  margin-top: 60px; /* Adjust to match Navbar height */
+  padding: 20px;
+}
+
+/* Footer fixed at bottom */
+.footer {
+  width: 100%;
+  background-color: #000;
+  color: #ddd;
+  padding: 20px;
+  text-align: center;
+}
