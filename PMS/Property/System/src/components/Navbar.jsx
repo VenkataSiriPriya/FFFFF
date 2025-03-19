@@ -1,70 +1,59 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/Navbar.css";
 
 function Navbar() {
-  const [selectedCity, setSelectedCity] = useState("Bangalore");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [isBuyDropdownOpen, setIsBuyDropdownOpen] = useState(false);
+  const [isRentDropdownOpen, setIsRentDropdownOpen] = useState(false);
+  const buyDropdownRef = useRef(null);
+  const rentDropdownRef = useRef(null);
+  const navigate = useNavigate();
 
-  const cities = {
-    "Nearby Cities": ["Bangalore - East", "Bangalore - South", "Bangalore - West", "Bangalore - Central", "Bangalore - North"],
-    "Popular Cities": ["Ahmedabad", "Bangalore", "Chennai", "Gurgaon", "Hyderabad", "Mumbai", "New Delhi", "Noida", "Pune", "Thane"],
-    "Other Cities": [
-      "Agra", "Allahabad", "Amritsar", "Bhopal", "Bhubaneswar", "Chandigarh", "Coimbatore", "Dehradun", "Goa", "Gwalior",
-      "Haridwar", "Indore", "Jalandhar", "Jammu", "Jodhpur", "Kanpur", "Kochi", "Lucknow", "Madurai", "Mangalore",
-      "Mysore", "Nagpur", "Patna", "Ranchi", "Shimla", "Surat", "Udaipur", "Vadodara", "Varanasi", "Vijayawada"
-    ]
+  const propertyOptions = [
+    { name: "Apartments", path: "/apartment" },
+    { name: "Villas", path: "/villa" },
+    { name: "Plots", path: "/plots" },
+    { name: "Commercial Properties", path: "/commercial" },
+    { name: "Luxury Homes", path: "/luxury" },
+  ];
+
+  const rentOptions = [
+    { name: "Flats for Rent", path: "/rent/flats" },
+    { name: "Villas for Rent", path: "/rent/villas" },
+    { name: "PG & Co-Living", path: "/rent/pg" },
+    { name: "Commercial for Rent", path: "/rent/commercial" },
+  ];
+
+  const handleSelectProperty = (path) => {
+    navigate(path);
+    setIsBuyDropdownOpen(false);
+    setIsRentDropdownOpen(false);
   };
 
-  // Close dropdown when clicking outside
+  // Close dropdowns when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
+      if (
+        buyDropdownRef.current &&
+        !buyDropdownRef.current.contains(event.target) &&
+        rentDropdownRef.current &&
+        !rentDropdownRef.current.contains(event.target)
+      ) {
+        setIsBuyDropdownOpen(false);
+        setIsRentDropdownOpen(false);
       }
     }
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
-
-  const handleCitySelect = (city) => {
-    setSelectedCity(city);
-    setIsDropdownOpen(false);
-  };
 
   return (
     <nav className="navbar">
       <div className="top-bar">
         <div className="logo">PropSync</div>
-
-        {/* City Dropdown */}
-        <div className="location" ref={dropdownRef}>
-          <div className="location-label" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-            {selectedCity} 🔻
-          </div>
-
-          {isDropdownOpen && (
-            <div className="dropdown">
-              <h3>INDIA</h3>
-              <div className="dropdown-content">
-                {Object.entries(cities).map(([category, cityList]) => (
-                  <div key={category} className="city-category">
-                    <strong>{category}</strong>
-                    <div className="city-list">
-                      {cityList.map((city, index) => (
-                        <div key={index} className="dropdown-item" onClick={() => handleCitySelect(city)}>
-                          {city}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-
         <div className="right-section">
           <div className="menu-item">MB Prime 🔻</div>
           <div className="menu-item">Login 🔻</div>
@@ -75,8 +64,60 @@ function Navbar() {
       </div>
 
       <div className="bottom-bar">
-        <a href="#">Buy 🔻</a>
-        <a href="#">Rent 🔻</a>
+        {/* Buy Dropdown */}
+        <div className="dropdown-container" ref={buyDropdownRef}>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsBuyDropdownOpen(true); // Keep Buy dropdown open when clicked
+              setIsRentDropdownOpen(false); // Close Rent dropdown if open
+            }}
+          >
+            Buy 🔻
+          </a>
+          {isBuyDropdownOpen && (
+            <div className="dropdown">
+              {propertyOptions.map((option, index) => (
+                <div
+                  key={index}
+                  className="dropdown-item"
+                  onClick={() => handleSelectProperty(option.path)}
+                >
+                  {option.name}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Rent Dropdown */}
+        <div className="dropdown-container" ref={rentDropdownRef}>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsRentDropdownOpen(true); // Open Rent dropdown
+              setIsBuyDropdownOpen(false); // Close Buy dropdown
+            }}
+          >
+            Rent 🔻
+          </a>
+          {isRentDropdownOpen && (
+            <div className="dropdown">
+              {rentOptions.map((option, index) => (
+                <div
+                  key={index}
+                  className="dropdown-item"
+                  onClick={() => handleSelectProperty(option.path)}
+                >
+                  {option.name}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
         <a href="#">Sell 🔻</a>
         <a href="#">Home Loans 🔻</a>
         <a href="#">Home Interiors</a>

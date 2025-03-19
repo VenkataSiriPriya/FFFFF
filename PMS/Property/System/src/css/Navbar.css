@@ -17,14 +17,13 @@
   }
   
   .logo {
-    font-size: 36px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
+    font-size: clamp(24px, 3vw, 40px); /* Adjusts dynamically based on screen size */
+    font-family: 'Dancing Script', cursive;
     position: relative;
     animation: holiColors 1.5s infinite alternate ease-in-out;
-    text-transform: uppercase;
     display: inline-block;
 }
+
 
 /* Holi color-changing animation */
 @keyframes holiColors {
@@ -124,17 +123,9 @@
     color: #d92128;
   }
 
-  .location {
+  .dropdown-container {
     position: relative;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
     display: inline-block;
-  }
-  
-  .location-label {
-    padding: 10px;
-    border-radius: 5px;
   }
   
   .dropdown {
@@ -144,44 +135,14 @@
     background: white;
     border: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    width: 700px; /* Increased width */
+    min-width: 200px;
     z-index: 1000;
-    padding: 15px;
-    border-radius: 5px;
-    white-space: nowrap;
-  }
-  
-  .dropdown h3 {
-    text-align: left;
-    font-size: 16px;
-    color: #d32f2f;
-    margin-bottom: 10px;
-  }
-  
-  .dropdown-content {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .city-category {
     padding: 10px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .city-category strong {
-    font-size: 14px;
-    color: #444;
-  }
-  
-  .city-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Increased to 5 columns for horizontal layout */
-    gap: 8px;
-    margin-top: 5px;
+    border-radius: 5px;
   }
   
   .dropdown-item {
-    padding: 5px;
+    padding: 8px 12px;
     cursor: pointer;
     font-size: 14px;
     color: #333;

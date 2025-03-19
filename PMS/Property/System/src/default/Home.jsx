@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import "../css/Home.css";
 
@@ -8,21 +9,10 @@ function Home() {
   const [budget, setBudget] = useState("");
   const [location, setLocation] = useState("Bangalore-Central");
 
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const handlePropertyTypeChange = (e) => {
-    setPropertyType(e.target.value);
-  };
-
-  const handleBudgetChange = (e) => {
-    setBudget(e.target.value);
-  };
-
-  const handleLocationChange = (e) => {
-    setLocation(e.target.value);
-  };
+  const handleSearchChange = (e) => setSearchTerm(e.target.value);
+  const handlePropertyTypeChange = (e) => setPropertyType(e.target.value);
+  const handleBudgetChange = (e) => setBudget(e.target.value);
+  const handleLocationChange = (e) => setLocation(e.target.value);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -67,11 +57,7 @@ function Home() {
               <i className="fas fa-home"></i>
             </span>
             <div className="property-dropdown">
-              <select
-                value={propertyType}
-                onChange={handlePropertyTypeChange}
-                className="dropdown-select"
-              >
+              <select value={propertyType} onChange={handlePropertyTypeChange} className="dropdown-select">
                 <option value="flat">Flat +1</option>
                 <option value="apartment">Apartment</option>
                 <option value="villa">Villa</option>
@@ -89,11 +75,7 @@ function Home() {
               <i className="fas fa-rupee-sign"></i>
             </span>
             <div className="budget-dropdown">
-              <select
-                value={budget}
-                onChange={handleBudgetChange}
-                className="dropdown-select"
-              >
+              <select value={budget} onChange={handleBudgetChange} className="dropdown-select">
                 <option value="">Budget</option>
                 <option value="0-50">Under ₹50 Lakhs</option>
                 <option value="50-100">₹50 Lakhs - ₹1 Cr</option>
@@ -113,6 +95,56 @@ function Home() {
             Search
           </button>
         </form>
+      </div>
+
+      {/* Property Cards Section */}
+      <div className="property-section">
+        <h2 className="section-title">
+          We've got properties for everyone
+          <span className="underline"></span>
+        </h2>
+
+        <div className="property-grid">
+          {/* Owner Properties */}
+          <div className="property-card">
+          <img src="public\images\pp1.jpeg" alt="Owner Properties" className="property-image" />
+
+            <div className="property-info">
+              <p className="property-title">Owner Properties</p>
+              <Link to="/owner-properties" className="property-link">Explore →</Link>
+            </div>
+          </div>
+
+          {/* Projects */}
+          <div className="property-card">
+            <img src="https://via.placeholder.com/300" alt="Projects" className="property-image" />
+            <div className="property-info">
+              <h3 className="property-number">999</h3>
+              <p className="property-title">Projects</p>
+              <Link to="/projects" className="property-link">Explore →</Link>
+            </div>
+          </div>
+
+          {/* Ready to Move-in */}
+          <div className="property-card">
+            <img src="https://via.placeholder.com/300" alt="Ready to Move-in" className="property-image" />
+            <div className="property-info">
+              <h3 className="property-number">41498</h3>
+              <p className="property-title">Ready to move-in</p>
+              <Link to="/ready-to-move" className="property-link">Explore →</Link>
+            </div>
+          </div>
+
+          {/* Budget Homes */}
+          <div className="property-card">
+            <img src="https://via.placeholder.com/300" alt="Budget Homes" className="property-image" />
+            <div className="property-info">
+              <h3 className="property-number">1505</h3>
+              <p className="property-title">Budget Homes</p>
+              <Link to="/budget-homes" className="property-link">Explore →</Link>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Footer Component */}
