@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFolder, faFileAlt, faComments } from "@fortawesome/free-solid-svg-icons";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useRef } from "react";
+
 import "../css/Home.css";
 
 function Home() {
@@ -17,7 +22,54 @@ function Home() {
   const handleSearch = (e) => {
     e.preventDefault();
     console.log("Searching for:", { location, propertyType, budget });
+  
   };
+
+  const scrollRef = useRef(null);
+
+  const scrollLeft = () => {
+    scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+  };
+
+  const projects = [
+    {
+      title: "Orchid Platinum",
+      location: "Whitefield, Bangalore",
+      company: "Goyal & Co and Hariyana Group",
+      type: "2, 3 BHK Flats",
+      price: "₹ 1.83 Cr onwards",
+      image: "path-to-image1.jpg",
+    },
+    {
+      title: "Fortuna Tejus",
+      location: "Mathikere, Bangalore",
+      company: "Fortuna Constructions Pvt Ltd",
+      type: "2 BHK Flats",
+      price: "₹ 1.37 Cr onwards",
+      image: "path-to-image2.jpg",
+    },
+    {
+      title: "Binary Temple Tree",
+      location: "Sarjapur Road, Bangalore",
+      company: "Binary Realty",
+      type: "3 BHK Flats",
+      price: "₹ 1.20 Cr onwards",
+      image: "path-to-image3.jpg",
+    },
+    {
+      title: "VBHC Aurora",
+      location: "Yelahanka New Town, Bangalore",
+      company: "VBHC Value Homes Pvt Ltd",
+      type: "3 BHK Flats",
+      price: "₹ 2.26 Cr onwards",
+      image: "path-to-image4.jpg",
+    },
+  ];
+
 
   return (
     <div className="homepage">
@@ -97,6 +149,32 @@ function Home() {
         </form>
       </div>
 
+     {/* magicHomes Section */}
+     <div className="magic-homes">
+        <span className="new-launch">New Launch</span>
+        <h2 className="magic-title">magicHomes</h2>
+        <p className="magic-subtitle">Encyclopedia For All New Projects</p>
+
+        <div className="magic-options">
+          <div className="magic-card blue">
+            <FontAwesomeIcon icon={faFolder} className="magic-icon" />
+            <p>Directory for All New Projects</p>
+          </div>
+
+          <div className="magic-card red">
+            <FontAwesomeIcon icon={faFileAlt} className="magic-icon" />
+            <p>All Reports from RERA</p>
+          </div>
+
+          <div className="magic-card yellow">
+            <FontAwesomeIcon icon={faComments} className="magic-icon" />
+            <p>Expert Reviews & Advice</p>
+          </div>
+        </div>
+
+        <button className="view-projects-button">View All New Projects</button>
+      </div>
+
       {/* Property Cards Section */}
       <div className="property-section">
         <h2 className="section-title">
@@ -107,8 +185,7 @@ function Home() {
         <div className="property-grid">
           {/* Owner Properties */}
           <div className="property-card">
-          <img src="public\images\pp1.jpeg" alt="Owner Properties" className="property-image" />
-
+            <img src="public/images/pp1.jpeg" alt="Owner Properties" className="property-image" />
             <div className="property-info">
               <p className="property-title">Owner Properties</p>
               <Link to="/owner-properties" className="property-link">Explore →</Link>
@@ -144,6 +221,62 @@ function Home() {
               <Link to="/budget-homes" className="property-link">Explore →</Link>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Property Services Section */}
+      <section className="property-services">
+        <h2 className="property-title">Property Services</h2>
+        <div className="underline"></div>
+
+        <div className="properties-cards">
+          <div className="properties-card">
+            <img src="/images/home-loan.jpg" alt="Best Home Loan Deals" className="properties-image" />
+            <div className="properties-info">
+              <h3>Best Home Loan Deals</h3>
+              <p>Compare & choose from 34+ banks to get the best home loan deal</p>
+            </div>
+          </div>
+
+          <div className="properties-card">
+            <img src="/images/home-interior.jpg" alt="Home Interiors" className="properties-image" />
+            <div className="properties-info">
+              <h3>Home Interiors</h3>
+              <p>Transform your space with our trusted Decor partners</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Top Projects Section */}
+      <div className="top-projects">
+        <div className="header">
+          <h2>Top Projects </h2>
+          <a href="#" className="see-all">See all Projects →</a>
+        </div>
+        <div className="underline"></div>
+        <div className="projects-container">
+          <button className="scroll-btn left" onClick={scrollLeft}>
+            <FaArrowLeft />
+          </button>
+          <div className="projects" ref={scrollRef}>
+            {projects.map((project, index) => (
+              <div key={index} className="project-card">
+                <img src={project.image} alt={project.title} className="project-img" />
+                <div className="project-info">
+                  <h3>{project.title}</h3>
+                  <p>{project.company}</p>
+                  <p>{project.location}</p>
+                  <p><strong>{project.type}</strong></p>
+                  <p className="price">{project.price}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button className="scroll-btn right" onClick={scrollRight}>
+            <FaArrowRight />
+          </button>
         </div>
       </div>
 

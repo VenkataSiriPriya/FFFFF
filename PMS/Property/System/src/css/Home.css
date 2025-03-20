@@ -358,3 +358,320 @@ footer {
   color: white;
   font-weight: bold;
 }
+
+/* Main Container */
+.magic-homes {
+  background: linear-gradient(to bottom, #eef8fc, #ffffff);
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin: auto;
+}
+  .magic-icon {
+    font-size: 24px; /* Reduced icon size */
+    color: white; /* Icon color */
+    background-color: red; /* Circle background color */
+    width: 60px; /* Smaller circle */
+    height: 60px;
+    border-radius: 50%; /* Ensures a perfect circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  }
+  
+
+
+/* New Launch Label */
+.new-launch {
+  background-color: #ffc107;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.magic-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #dc3545;
+  margin: 10px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Subtitle */
+.magic-subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Cards Container */
+.magic-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Card Styles */
+.magic-card {
+  width: 300px;
+  height: 120px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+/* Circular Icon Container */
+.magic-card .icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Card Text */
+.magic-card p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+/* Hover Effect */
+.magic-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Background Colors */
+.magic-card.blue {
+  background-color: #e0f7ff;
+}
+
+.magic-card.red {
+  background-color: #fde8e8;
+}
+
+.magic-card.yellow {
+  background-color: #fff4cc;
+}
+
+/* View Projects Button */
+.view-projects-button {
+  background-color: #dc3545;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.view-projects-button:hover {
+  background-color: #b52a3a;
+}
+
+.property-services {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.property-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+}
+
+.underline {
+  width: 50px;
+  height: 4px;
+  background-color: #ffc107;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.properties-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.properties-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+  width: 300px;
+}
+
+.properties-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.properties-info {
+  padding: 15px;
+}
+
+.properties-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.properties-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.top-projects {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: black; /* Title in black */
+  position: centre;
+  display: inline-block;
+}
+.brand {
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.see-all {
+  font-size: 14px;
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.underline {
+  width: 50px;
+  height: 3px;
+  background-color: gold;
+  margin-top: 5px;
+}
+
+.projects-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.projects {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.project-card {
+  flex: 0 0 auto;
+  width: 280px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 15px;
+}
+
+.project-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.project-info p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.scroll-btn {
+  position: absolute;
+  background: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red; /* Arrow color */
+}
+
+.left {
+  left: -20px;
+}
+
+.right {
+  right: -20px;
+}
+
