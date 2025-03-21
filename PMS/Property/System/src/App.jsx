@@ -30,6 +30,7 @@ function App() {
         <Route path="/plots" element={<Plots />} />
       
       </Routes>
+      <Footer />
 
     </Router>
 

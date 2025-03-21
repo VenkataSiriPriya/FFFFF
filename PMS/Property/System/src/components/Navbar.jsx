@@ -55,7 +55,6 @@ function Navbar() {
       <div className="top-bar">
         <div className="logo">PropSync</div>
         <div className="right-section">
-          <div className="menu-item">MB Prime 🔻</div>
           <div className="menu-item">Login 🔻</div>
           <button className="post-property-btn">
             Post Property <span className="free-badge">FREE</span>

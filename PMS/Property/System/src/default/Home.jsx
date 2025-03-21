@@ -82,7 +82,7 @@ function Home() {
         <div className="nav-tabs">
           <a href="#" className="nav-tab active">Buy</a>
           <a href="#" className="nav-tab">Rent</a>
-          <a href="#" className="nav-tab brand">magicHomes</a>
+          <a href="#" className="nav-tab brand">BlissNest</a>
           <a href="#" className="nav-tab">PG</a>
           <a href="#" className="nav-tab">Plot</a>
           <a href="#" className="nav-tab">Commercial</a>
