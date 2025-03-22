@@ -12,28 +12,24 @@ import Luxury from "./buy/Luxury";
 import Commercial from "./buy/Commercial";
 import Plots from "./buy/Plots";
 
-
-
-
 function App() {
   return (
     <Router>
-      <Navbar /> 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/post" element={<Post />} />
-        <Route path="/apartment" element={<Apart />} />
-        <Route path="/villa" element={<Villas />} />
-        <Route path="/luxury" element={<Luxury />} />
-        <Route path="/commercial" element={<Commercial />} />
-        <Route path="/plots" element={<Plots />} />
-      
-      </Routes>
+      <Navbar />
+      <main> {/* This wrapper ensures the content expands to fill available space */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/post" element={<Post />} />
+          <Route path="/apartment" element={<Apart />} />
+          <Route path="/villa" element={<Villas />} />
+          <Route path="/luxury" element={<Luxury />} />
+          <Route path="/commercial" element={<Commercial />} />
+          <Route path="/plots" element={<Plots />} />
+        </Routes>
+      </main>
       <Footer />
-
     </Router>
-
   );
 }
 

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolder, faFileAlt, faComments } from "@fortawesome/free-solid-svg-icons";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -279,9 +278,6 @@ function Home() {
           </button>
         </div>
       </div>
-
-      {/* Footer Component */}
-      <Footer />
     </div>
   );
 }

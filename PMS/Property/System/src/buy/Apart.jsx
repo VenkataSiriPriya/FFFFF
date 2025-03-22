@@ -33,9 +33,9 @@ function Apart() {
           <p>Browse our selection of premium apartments available for rent</p>
         </div>
         
-        <div className="search-container">
-          <div className="search-bar">
-            <div className="search-group">
+        <div className="Search-container">
+          <div className="Search-bar">
+            <div className="Search-group">
               <label>Location</label>
               <select 
                 value={locationFilter} 
@@ -48,7 +48,7 @@ function Apart() {
               </select>
             </div>
             
-            <div className="search-group">
+            <div className="Search-group">
               <label>Budget</label>
               <div className="price-inputs">
                 <input 

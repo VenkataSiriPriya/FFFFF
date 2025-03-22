@@ -262,11 +262,6 @@
   flex-direction: column;
 }
 
-/* Push footer to bottom */
-footer {
-  margin-top: auto;
-}
-
 .dropdown {
   position: absolute;
   top: 50px;
