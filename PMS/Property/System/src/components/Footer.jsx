@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Footer.css";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = () => {
+    if (email.trim() !== "") {
+      setSubscribed(true);
+      setEmail(""); // Clear input after subscription
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -21,8 +31,24 @@ function Footer() {
           <h3>Stay Connected</h3>
           <p>Subscribe to receive exclusive property insights and investment opportunities.</p>
           <div className="newsletter-form">
-            <input type="email" placeholder="Enter your email" aria-label="Email Address" />
-            <button className="signup-btn">Subscribe</button>
+            {subscribed ? (
+              <div className="subscription-message">
+                <p>🎉 Thanks for subscribing!</p>
+              </div>
+            ) : (
+              <>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  aria-label="Email Address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <button className="signup-btn" onClick={handleSubscribe}>
+                  Subscribe
+                </button>
+              </>
+            )}
           </div>
         </div>
 
@@ -43,10 +69,18 @@ function Footer() {
           <h3>Follow Us</h3>
           <p>Stay updated on our latest offerings and industry news.</p>
           <div className="social-icons">
-            <a href="#" aria-label="Facebook"><FaFacebook /></a>
-            <a href="#" aria-label="Twitter"><FaTwitter /></a>
-            <a href="#" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+            <a href="https://www.facebook.com/login" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <FaFacebook />
+            </a>
+            <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <FaTwitter />
+            </a>
+            <a href="https://www.instagram.com/accounts/login" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <FaInstagram />
+            </a>
+            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <FaLinkedin />
+            </a>
           </div>
         </div>
         

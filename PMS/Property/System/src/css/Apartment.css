@@ -126,6 +126,17 @@ html, body {
   position: relative;
   top: -2px;
 }
+.pr-tag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #f5d547, #e6a617);
+  color: #2c3e50;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 .reset-button {
   background-color: rgba(255, 255, 255, 0.2);
@@ -349,7 +360,7 @@ html, body {
   color: #2c3e50;
 }
 
-.search-button {
+.Search-button {
   padding: 0 25px;
   background: linear-gradient(135deg, #f5d547, #e6a617, #b6782a);
   color: #2c3e50;
@@ -363,7 +374,7 @@ html, body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.search-button:hover {
+.Search-button:hover {
   background: linear-gradient(135deg, #e6a617, #b6782a, #8e5c20);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
