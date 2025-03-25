@@ -41,7 +41,7 @@ function Home() {
       company: "Goyal & Co and Hariyana Group",
       type: "2, 3 BHK Flats",
       price: "₹ 1.83 Cr onwards",
-      image: "path-to-image1.jpg",
+      image: "public/images/bang.jpeg",
     },
     {
       title: "Fortuna Tejus",
@@ -195,7 +195,6 @@ function Home() {
           <div className="property-card">
             <img src="https://via.placeholder.com/300" alt="Projects" className="property-image" />
             <div className="property-info">
-              <h3 className="property-number">999</h3>
               <p className="property-title">Projects</p>
               <Link to="/projects" className="property-link">Explore →</Link>
             </div>
@@ -205,7 +204,6 @@ function Home() {
           <div className="property-card">
             <img src="https://via.placeholder.com/300" alt="Ready to Move-in" className="property-image" />
             <div className="property-info">
-              <h3 className="property-number">41498</h3>
               <p className="property-title">Ready to move-in</p>
               <Link to="/ready-to-move" className="property-link">Explore →</Link>
             </div>
@@ -215,7 +213,6 @@ function Home() {
           <div className="property-card">
             <img src="https://via.placeholder.com/300" alt="Budget Homes" className="property-image" />
             <div className="property-info">
-              <h3 className="property-number">1505</h3>
               <p className="property-title">Budget Homes</p>
               <Link to="/budget-homes" className="property-link">Explore →</Link>
             </div>
@@ -230,7 +227,7 @@ function Home() {
 
         <div className="properties-cards">
           <div className="properties-card">
-            <img src="/images/home-loan.jpg" alt="Best Home Loan Deals" className="properties-image" />
+            <img src="public/images/hh1.jpeg" alt="Best Home Loan Deals" className="properties-image" />
             <div className="properties-info">
               <h3>Best Home Loan Deals</h3>
               <p>Compare & choose from 34+ banks to get the best home loan deal</p>
@@ -238,7 +235,7 @@ function Home() {
           </div>
 
           <div className="properties-card">
-            <img src="/images/home-interior.jpg" alt="Home Interiors" className="properties-image" />
+            <img src="public/images/jj1.webp" alt="Home Interiors" className="properties-image" />
             <div className="properties-info">
               <h3>Home Interiors</h3>
               <p>Transform your space with our trusted Decor partners</p>

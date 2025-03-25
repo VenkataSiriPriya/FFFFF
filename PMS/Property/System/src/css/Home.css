@@ -1,3 +1,11 @@
+body {
+  background-color: #fae8c8; /* Replace with your image path */
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  background-attachment: fixed; /* Keep the image fixed when scrolling */
+}
+
 /* Main container styles */
 .search-container {
   max-width: 1200px;
