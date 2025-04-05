@@ -9,7 +9,7 @@ html, body {
 
 /* Search Bar - Redesigned */
 .Search-container {
-  background: linear-gradient(135deg, #f5d547, #e6a617, #b6782a);
+  background: #e1ba92;
   border-radius: 16px;
   padding: 25px;
   margin-bottom: 35px;
@@ -130,7 +130,7 @@ html, body {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background: linear-gradient(135deg, #f5d547, #e6a617);
+  background: #e1ba92;
   color: #2c3e50;
   padding: 5px 10px;
   border-radius: 4px;
@@ -257,7 +257,7 @@ html, body {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background: linear-gradient(135deg, #f5d547, #e6a617);
+  background: #e1ba92;
   color: #2c3e50;
   padding: 5px 10px;
   border-radius: 4px;
@@ -309,7 +309,7 @@ html, body {
 /* View Button - Positioned inside the box with gold gradient */
 .view-button {
   width: 100%;
-  background: linear-gradient(135deg, #f5d547, #e6a617, #b6782a);
+  background: #e1ba92;
   color: #2c3e50;
   border: none;
   border-radius: 4px;
@@ -323,7 +323,7 @@ html, body {
 }
 
 .view-button:hover {
-  background: linear-gradient(135deg, #e6a617, #b6782a, #8e5c20);
+  background: #d0aa8b;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
