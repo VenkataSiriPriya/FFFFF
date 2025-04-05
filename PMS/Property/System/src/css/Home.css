@@ -198,6 +198,7 @@ body {
   margin-bottom: 8px;
 }
 
+
 /* View More Link / Button */
 .property-link {
   display: inline-block;
@@ -214,8 +215,6 @@ body {
 .property-link:hover {
   background: linear-gradient(90deg, #c10024, #e06a00);
 }
-
-
 
 
 /* Main Container */
@@ -484,6 +483,22 @@ body {
   flex-direction: column;
   margin-bottom: 15px;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;  /* Space between title & link */
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 20px;  /* Optional for side spacing */
+}
+
+.see-all {
+  font-size: 14px;
+  color: #ff5a5f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
 
 /* Project Image */
 .project-img {
