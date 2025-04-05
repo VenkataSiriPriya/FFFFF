@@ -32,7 +32,7 @@ function Home() {
       company: "Goyal & Co and Hariyana Group",
       type: "2, 3 BHK Flats",
       price: "₹ 1.83 Cr onwards",
-      image: "public/images/bang.jpeg",
+      image: "images/bang.jpeg",
     },
     {
       title: "Fortuna Tejus",
@@ -40,7 +40,7 @@ function Home() {
       company: "Fortuna Constructions Pvt Ltd",
       type: "2 BHK Flats",
       price: "₹ 1.37 Cr onwards",
-      image: "public/images/proj2.jpg",
+      image: "images/pro1.jpeg",
     },
     {
       title: "Binary Temple Tree",
@@ -48,7 +48,7 @@ function Home() {
       company: "Binary Realty",
       type: "3 BHK Flats",
       price: "₹ 1.20 Cr onwards",
-      image: "public/images/proj3.jpg",
+      image: "images/pro2.jpeg",
     },
     {
       title: "VBHC Aurora",
@@ -56,7 +56,7 @@ function Home() {
       company: "VBHC Value Homes Pvt Ltd",
       type: "3 BHK Flats",
       price: "₹ 2.26 Cr onwards",
-      image: "public/images/proj4.jpg",
+      image: "images/pro3.webp",
     },
     {
       title: "Prestige Serenity Shores",
@@ -64,7 +64,7 @@ function Home() {
       company: "Prestige Group",
       type: "2, 3, 4 BHK Flats",
       price: "₹ 1.95 Cr onwards",
-      image: "public/images/proj5.jpg",
+      image: "images/pro4.jpeg",
     },
     {
       title: "Sobha Windsor",
@@ -72,7 +72,7 @@ function Home() {
       company: "Sobha Limited",
       type: "3, 4 BHK Flats",
       price: "₹ 2.10 Cr onwards",
-      image: "public/images/proj6.jpg",
+      image: "images/pro5.jpeg",
     },
     {
       title: "Brigade Utopia",
@@ -80,7 +80,7 @@ function Home() {
       company: "Brigade Group",
       type: "Studio, 1, 2, 3 BHK",
       price: "₹ 70 Lakh onwards",
-      image: "public/images/proj7.jpg",
+      image: "images/pro6.jpg",
     },
     {
       title: "Assetz Bloom & Dell",
@@ -88,7 +88,7 @@ function Home() {
       company: "Assetz Property Group",
       type: "1, 2, 3 BHK Flats",
       price: "₹ 75 Lakh onwards",
-      image: "public/images/proj8.jpg",
+      image: "images/pro7.png",
     },
     {
       title: "Prestige Waterford",
@@ -96,7 +96,7 @@ function Home() {
       company: "Prestige Group",
       type: "3, 4 BHK Flats",
       price: "₹ 2.15 Cr onwards",
-      image: "public/images/proj9.jpg",
+      image: "images/pro8.jpg",
     },
     {
       title: "Sobha Dream Acres",
@@ -104,7 +104,7 @@ function Home() {
       company: "Sobha Limited",
       type: "1, 2 BHK Flats",
       price: "₹ 68 Lakh onwards",
-      image: "public/images/proj10.jpg",
+      image: "images/pro9.webp",
     },
     {
       title: "Salarpuria Sattva Magnus",
@@ -112,7 +112,7 @@ function Home() {
       company: "Salarpuria Sattva Group",
       type: "3, 4 BHK Flats",
       price: "₹ 2.4 Cr onwards",
-      image: "public/images/proj11.jpg",
+      image: "images/pro10.jpg",
     },
     {
       title: "Brigade Cornerstone Utopia",
@@ -120,7 +120,7 @@ function Home() {
       company: "Brigade Group",
       type: "1, 2, 3 BHK Flats",
       price: "₹ 80 Lakh onwards",
-      image: "public/images/proj12.jpg",
+      image: "images/pro11.webp",
     },
     {
       title: "Adarsh Palm Retreat",
@@ -128,7 +128,7 @@ function Home() {
       company: "Adarsh Developers",
       type: "Luxury Villas",
       price: "₹ 3.5 Cr onwards",
-      image: "public/images/proj13.jpg",
+      image: "images/pro12.avif",
     },
     {
       title: "Sobha Royal Pavilion",
@@ -136,7 +136,7 @@ function Home() {
       company: "Sobha Limited",
       type: "2, 3, 4 BHK Flats",
       price: "₹ 1.85 Cr onwards",
-      image: "public/images/proj14.jpg",
+      image: "images/pro13.jpg",
     },
     {
       title: "Embassy Springs",
@@ -144,7 +144,7 @@ function Home() {
       company: "Embassy Group",
       type: "Plots & Villas",
       price: "₹ 2.1 Cr onwards",
-      image: "public/images/proj15.jpg",
+      image: "images/pro14.jpg",
     },
     {
       title: "Prestige Finsbury Park",
@@ -152,7 +152,7 @@ function Home() {
       company: "Prestige Group",
       type: "1, 2, 3 BHK Flats",
       price: "₹ 58 Lakh onwards",
-      image: "public/images/proj16.jpg",
+      image: "images/pro15.png",
     },
     {
       title: "Purva Atmosphere",
@@ -160,7 +160,7 @@ function Home() {
       company: "Puravankara Limited",
       type: "2, 3 BHK Flats",
       price: "₹ 1.4 Cr onwards",
-      image: "public/images/proj17.jpg",
+      image: "images/pro16.jpg",
     },
     {
       title: "Godrej Aqua",
@@ -168,7 +168,7 @@ function Home() {
       company: "Godrej Properties",
       type: "2, 3 BHK Flats",
       price: "₹ 92 Lakh onwards",
-      image: "public/images/proj18.jpg",
+      image: "images/pro17.jpeg",
     },
     {
       title: "Total Environment In That Quiet Earth",
@@ -176,7 +176,7 @@ function Home() {
       company: "Total Environment",
       type: "Luxury Villas & Flats",
       price: "₹ 3.5 Cr onwards",
-      image: "public/images/proj19.jpg",
+      image: "images/pro18.jpg",
     },
     {
       title: "Shriram Blue",
@@ -184,7 +184,7 @@ function Home() {
       company: "Shriram Properties",
       type: "1, 2, 3 BHK Flats",
       price: "₹ 70 Lakh onwards",
-      image: "public/images/proj20.jpg",
+      image: "images/pro19.jpeg",
     },
   ];
   
@@ -242,7 +242,7 @@ function Home() {
         <div className="property-grid">
           {/* Owner Properties */}
           <div className="property-card">
-            <img src="public/images/pp1.jpeg" alt="Owner Properties" className="property-image" />
+            <img src="images/pp1.jpeg" alt="Owner Properties" className="property-image" />
             <div className="property-info">
               <p className="property-title">Owner Properties</p>
               <Link to="/owner-properties" className="property-link">Explore →</Link>
@@ -251,7 +251,7 @@ function Home() {
 
           {/* Projects */}
           <div className="property-card">
-            <img src="https://via.placeholder.com/300" alt="Projects" className="property-image" />
+            <img src="images/proj.jpg" alt="Projects" className="property-image" />
             <div className="property-info">
               <p className="property-title">Projects</p>
               <Link to="/projects" className="property-link">Explore →</Link>
@@ -260,7 +260,7 @@ function Home() {
 
           {/* Ready to Move-in */}
           <div className="property-card">
-            <img src="https://via.placeholder.com/300" alt="Ready to Move-in" className="property-image" />
+            <img src="images/proj1.webp" alt="Ready to Move-in" className="property-image" />
             <div className="property-info">
               <p className="property-title">Ready to move-in</p>
               <Link to="/ready-to-move" className="property-link">Explore →</Link>
@@ -269,7 +269,7 @@ function Home() {
 
           {/* Budget Homes */}
           <div className="property-card">
-            <img src="https://via.placeholder.com/300" alt="Budget Homes" className="property-image" />
+            <img src="images/proj2.jpg" alt="Budget Homes" className="property-image" />
             <div className="property-info">
               <p className="property-title">Budget Homes</p>
               <Link to="/budget-homes" className="property-link">Explore →</Link>
