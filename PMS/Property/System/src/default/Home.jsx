@@ -8,20 +8,10 @@ import { useRef } from "react";
 import "../css/Home.css";
 
 function Home() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [propertyType, setPropertyType] = useState("flat");
-  const [budget, setBudget] = useState("");
-  const [location, setLocation] = useState("Bangalore-Central");
+  const projectsRef = useRef(null); // Reference to Top Projects section
 
-  const handleSearchChange = (e) => setSearchTerm(e.target.value);
-  const handlePropertyTypeChange = (e) => setPropertyType(e.target.value);
-  const handleBudgetChange = (e) => setBudget(e.target.value);
-  const handleLocationChange = (e) => setLocation(e.target.value);
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    console.log("Searching for:", { location, propertyType, budget });
-  
+  const handleScrollToProjects = () => {
+    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollRef = useRef(null);
@@ -33,6 +23,7 @@ function Home() {
   const scrollRight = () => {
     scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
   };
+
 
   const projects = [
     {
@@ -49,7 +40,7 @@ function Home() {
       company: "Fortuna Constructions Pvt Ltd",
       type: "2 BHK Flats",
       price: "₹ 1.37 Cr onwards",
-      image: "path-to-image2.jpg",
+      image: "public/images/proj2.jpg",
     },
     {
       title: "Binary Temple Tree",
@@ -57,7 +48,7 @@ function Home() {
       company: "Binary Realty",
       type: "3 BHK Flats",
       price: "₹ 1.20 Cr onwards",
-      image: "path-to-image3.jpg",
+      image: "public/images/proj3.jpg",
     },
     {
       title: "VBHC Aurora",
@@ -65,88 +56,155 @@ function Home() {
       company: "VBHC Value Homes Pvt Ltd",
       type: "3 BHK Flats",
       price: "₹ 2.26 Cr onwards",
-      image: "path-to-image4.jpg",
+      image: "public/images/proj4.jpg",
+    },
+    {
+      title: "Prestige Serenity Shores",
+      location: "Whitefield, Bangalore",
+      company: "Prestige Group",
+      type: "2, 3, 4 BHK Flats",
+      price: "₹ 1.95 Cr onwards",
+      image: "public/images/proj5.jpg",
+    },
+    {
+      title: "Sobha Windsor",
+      location: "Whitefield, Bangalore",
+      company: "Sobha Limited",
+      type: "3, 4 BHK Flats",
+      price: "₹ 2.10 Cr onwards",
+      image: "public/images/proj6.jpg",
+    },
+    {
+      title: "Brigade Utopia",
+      location: "Varthur Road, Bangalore",
+      company: "Brigade Group",
+      type: "Studio, 1, 2, 3 BHK",
+      price: "₹ 70 Lakh onwards",
+      image: "public/images/proj7.jpg",
+    },
+    {
+      title: "Assetz Bloom & Dell",
+      location: "Whitefield, Bangalore",
+      company: "Assetz Property Group",
+      type: "1, 2, 3 BHK Flats",
+      price: "₹ 75 Lakh onwards",
+      image: "public/images/proj8.jpg",
+    },
+    {
+      title: "Prestige Waterford",
+      location: "Whitefield, Bangalore",
+      company: "Prestige Group",
+      type: "3, 4 BHK Flats",
+      price: "₹ 2.15 Cr onwards",
+      image: "public/images/proj9.jpg",
+    },
+    {
+      title: "Sobha Dream Acres",
+      location: "Panathur, Bangalore",
+      company: "Sobha Limited",
+      type: "1, 2 BHK Flats",
+      price: "₹ 68 Lakh onwards",
+      image: "public/images/proj10.jpg",
+    },
+    {
+      title: "Salarpuria Sattva Magnus",
+      location: "Rajajinagar, Bangalore",
+      company: "Salarpuria Sattva Group",
+      type: "3, 4 BHK Flats",
+      price: "₹ 2.4 Cr onwards",
+      image: "public/images/proj11.jpg",
+    },
+    {
+      title: "Brigade Cornerstone Utopia",
+      location: "Whitefield, Bangalore",
+      company: "Brigade Group",
+      type: "1, 2, 3 BHK Flats",
+      price: "₹ 80 Lakh onwards",
+      image: "public/images/proj12.jpg",
+    },
+    {
+      title: "Adarsh Palm Retreat",
+      location: "Sarjapur Road, Bangalore",
+      company: "Adarsh Developers",
+      type: "Luxury Villas",
+      price: "₹ 3.5 Cr onwards",
+      image: "public/images/proj13.jpg",
+    },
+    {
+      title: "Sobha Royal Pavilion",
+      location: "Sarjapur Road, Bangalore",
+      company: "Sobha Limited",
+      type: "2, 3, 4 BHK Flats",
+      price: "₹ 1.85 Cr onwards",
+      image: "public/images/proj14.jpg",
+    },
+    {
+      title: "Embassy Springs",
+      location: "Devanahalli, Bangalore",
+      company: "Embassy Group",
+      type: "Plots & Villas",
+      price: "₹ 2.1 Cr onwards",
+      image: "public/images/proj15.jpg",
+    },
+    {
+      title: "Prestige Finsbury Park",
+      location: "Bagalur, Bangalore",
+      company: "Prestige Group",
+      type: "1, 2, 3 BHK Flats",
+      price: "₹ 58 Lakh onwards",
+      image: "public/images/proj16.jpg",
+    },
+    {
+      title: "Purva Atmosphere",
+      location: "Thanisandra, Bangalore",
+      company: "Puravankara Limited",
+      type: "2, 3 BHK Flats",
+      price: "₹ 1.4 Cr onwards",
+      image: "public/images/proj17.jpg",
+    },
+    {
+      title: "Godrej Aqua",
+      location: "Hosahalli, Bangalore",
+      company: "Godrej Properties",
+      type: "2, 3 BHK Flats",
+      price: "₹ 92 Lakh onwards",
+      image: "public/images/proj18.jpg",
+    },
+    {
+      title: "Total Environment In That Quiet Earth",
+      location: "Hennur Road, Bangalore",
+      company: "Total Environment",
+      type: "Luxury Villas & Flats",
+      price: "₹ 3.5 Cr onwards",
+      image: "public/images/proj19.jpg",
+    },
+    {
+      title: "Shriram Blue",
+      location: "KR Puram, Bangalore",
+      company: "Shriram Properties",
+      type: "1, 2, 3 BHK Flats",
+      price: "₹ 70 Lakh onwards",
+      image: "public/images/proj20.jpg",
     },
   ];
+  
 
 
   return (
     <div className="homepage">
-      {/* Main Search Section */}
-      <div className="search-container">
-        <h1 className="main-heading">
-          Find a home you'll <span className="love-text">love</span>
-        </h1>
-
-        <div className="nav-tabs">
-          <a href="#" className="nav-tab active">Buy</a>
-          <a href="#" className="nav-tab">Rent</a>
-          <a href="#" className="nav-tab brand">BlissNest</a>
-          <a href="#" className="nav-tab">PG</a>
-          <a href="#" className="nav-tab">Plot</a>
-          <a href="#" className="nav-tab">Commercial</a>
-          <a href="#" className="nav-tab">Post Free Property Ad</a>
-        </div>
-
-        <form onSubmit={handleSearch} className="search-form">
-          <div className="location-input">
-            <span className="location-icon">
-              <i className="fas fa-map-marker-alt"></i>
-            </span>
-            <span className="location-text">{location}</span>
-            <input
-              type="text"
-              placeholder="Add more..."
-              onChange={handleSearchChange}
-              value={searchTerm}
-              className="location-placeholder"
-            />
-          </div>
-
-          <div className="property-type">
-            <span className="property-icon">
-              <i className="fas fa-home"></i>
-            </span>
-            <div className="property-dropdown">
-              <select value={propertyType} onChange={handlePropertyTypeChange} className="dropdown-select">
-                <option value="flat">Flat +1</option>
-                <option value="apartment">Apartment</option>
-                <option value="villa">Villa</option>
-                <option value="plot">Plot</option>
-                <option value="commercial">Commercial</option>
-              </select>
-              <span className="dropdown-arrow">
-                <i className="fas fa-chevron-down"></i>
-              </span>
-            </div>
-          </div>
-
-          <div className="budget">
-            <span className="budget-icon">
-              <i className="fas fa-rupee-sign"></i>
-            </span>
-            <div className="budget-dropdown">
-              <select value={budget} onChange={handleBudgetChange} className="dropdown-select">
-                <option value="">Budget</option>
-                <option value="0-50">Under ₹50 Lakhs</option>
-                <option value="50-100">₹50 Lakhs - ₹1 Cr</option>
-                <option value="100-200">₹1 Cr - ₹2 Cr</option>
-                <option value="200+">Above ₹2 Cr</option>
-              </select>
-              <span className="dropdown-arrow">
-                <i className="fas fa-chevron-down"></i>
-              </span>
-            </div>
-          </div>
-
-          <button type="submit" className="search-button">
-            <span className="search-icon">
-              <i className="fas fa-search"></i>
-            </span>
-            Search
-          </button>
-        </form>
+      {/* Intro Section */}
+      <div className="intro-section">
+        <h1>Discover Exceptional Living Spaces</h1>
+        <p>
+          Welcome to BlissNest — your trusted destination for finding premium residential properties 
+          across Bangalore. Explore hand-picked homes that blend modern living with timeless elegance.
+        </p>
+        <button className="explore-btn" onClick={handleScrollToProjects}>
+          Explore Top Projects
+        </button>
       </div>
+  
+
 
      {/* magicHomes Section */}
      <div className="magic-homes">
@@ -222,31 +280,48 @@ function Home() {
 
       {/* Property Services Section */}
       <section className="property-services">
-        <h2 className="property-title">Property Services</h2>
-        <div className="underline"></div>
+  <h2 className="property-title">Property Services</h2>
+  <div className="underline"></div>
 
-        <div className="properties-cards">
-          <div className="properties-card">
-            <img src="public/images/hh1.jpeg" alt="Best Home Loan Deals" className="properties-image" />
-            <div className="properties-info">
-              <h3>Best Home Loan Deals</h3>
-              <p>Compare & choose from 34+ banks to get the best home loan deal</p>
-            </div>
-          </div>
+  <div className="properties-cards">
+    <div className="properties-card">
+      <img src="public/images/hh1.jpeg" alt="Best Home Loan Deals" className="properties-image" />
+      <div className="properties-info">
+        <h3>Best Home Loan Deals</h3>
+        <p>Compare & choose from 34+ banks to get the best home loan deal</p>
+      </div>
+    </div>
 
-          <div className="properties-card">
-            <img src="public/images/jj1.webp" alt="Home Interiors" className="properties-image" />
-            <div className="properties-info">
-              <h3>Home Interiors</h3>
-              <p>Transform your space with our trusted Decor partners</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="properties-card">
+      <img src="public/images/jj1.webp" alt="Home Interiors" className="properties-image" />
+      <div className="properties-info">
+        <h3>Home Interiors</h3>
+        <p>Transform your space with our trusted Decor partners</p>
+      </div>
+    </div>
+
+    <div className="properties-card">
+      <img src="public/images/services.jpg" alt="Legal Assistance" className="properties-image" />
+      <div className="properties-info">
+        <h3>Legal Assistance</h3>
+        <p>Expert legal support for property documentation & verification</p>
+      </div>
+    </div>
+
+    <div className="properties-card">
+      <img src="public/images/rent.webp" alt="Rental & Property Management" className="properties-image" />
+      <div className="properties-info">
+        <h3>Rental & Property Management</h3>
+        <p>End-to-end rental and property management solutions</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
       {/* Top Projects Section */}
-      <div className="top-projects">
+      <div className="top-projects" ref={projectsRef}>
         <div className="header">
           <h2>Top Projects </h2>
           <a href="#" className="see-all">See all Projects →</a>
