@@ -1,0 +1,30 @@
+.project-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e3a8a;
+    padding: 15px 40px;
+    color: white;
+  }
+  
+  .project-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .project-nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .project-nav-links li a:hover {
+    color: #facc15;
+  }
+  
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  

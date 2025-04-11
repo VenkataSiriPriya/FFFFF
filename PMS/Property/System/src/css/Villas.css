@@ -34,7 +34,7 @@ html, body {
   
   /* Filter container - Matches golden navbar */
   .f1-container {
-    background: linear-gradient(135deg, #f5d547, #e6a617, #b6782a);
+    background: #e1ba92;
     border-radius: 16px;
     padding: 25px;
     margin-bottom: 35px;
@@ -222,7 +222,7 @@ html, body {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background: linear-gradient(135deg, #f5d547, #e6a617);
+    background: #e1ba92;
     color: #2c3e50;
     padding: 5px 10px;
     border-radius: 4px;
@@ -274,7 +274,7 @@ html, body {
   /* Explore Button - Matches golden theme */
   .ex-button {
     width: 100%;
-    background: linear-gradient(135deg, #f5d547, #e6a617, #b6782a);
+    background: #e1ba92;
     color: #2c3e50;
     border: none;
     border-radius: 4px;
@@ -288,7 +288,7 @@ html, body {
   }
   
   .ex-button:hover {
-    background: linear-gradient(135deg, #e6a617, #b6782a, #a3691e);
+    background: #e1ba92;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   }
   

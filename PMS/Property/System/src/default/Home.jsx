@@ -324,7 +324,7 @@ function Home() {
       <div className="top-projects" ref={projectsRef}>
         <div className="header">
           <h2>Top Projects </h2>
-          <a href="#" className="see-all">See all Projects →</a>
+          <Link to="/projects" className="see-all">See all Projects →</Link>
         </div>
         <div className="underline"></div>
         <div className="projects-container">
